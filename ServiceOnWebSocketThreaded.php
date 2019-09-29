@@ -6,7 +6,7 @@
 */
 
 error_reporting ( E_ALL ^ E_NOTICE ^ E_DEPRECATED ^ E_WARNING ^ E_ERROR ^ E_STRICT );
-error_reporting (E_ALL); ini_set('display_errors', 1);
+// error_reporting (E_ALL); ini_set('display_errors', 1);
 
 define ( 'APP_ROOT', str_replace ( '\\', '/', getcwd () ) );
 define ( 'APP_TEMP_ROOT', APP_ROOT.'/temp' );
