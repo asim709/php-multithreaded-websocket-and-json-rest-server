@@ -73,7 +73,12 @@ Reponse would look like this:
 	{"status":true,"data":"50","_id":"axBy1"}
 
 #### Another way to Call the API
-There could be times when you may need to send large amount of data or blob to server. The large size may exeed the maximum URL limit and request may not be completed. To solve this issue the user can simple make a **POST** request to server with all the parameters enclosed in request body as in any other post requests. However in web-sockets there are no known limits.
+When a URL based approach is used to call api methods then there could be times when you may need to send large amount of data or blob to server. The large size may exeed the maximum URL limit and request may not be completed. To solve this issue the user can simply make a conventional **POST** request to server with all the parameters enclosed in request body. However in web-sockets there are no known limits.
+
+Calling above add method in mathematics class through post will look alike this:
+
+    URL: http://localhost/myproject/service
+    Request Body: a=Mathematics:add&p=[2,5]
 
 #### Special Considerations for WebSocket Server
 I started building this on PHP 5.6 and pthreads v2.1 and the biggest problem i faced were memory leaks, threads seemingly terminated but memory is not released, memory keeps on increasing even after threads are discarded. After researching for a few days found the best combinations that works perfectly for multi-threading. I would suggest you to use following versions as i tested over these:
