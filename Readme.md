@@ -81,7 +81,7 @@ Calling above add method in mathematics class through post will look alike this:
     Request Body: a=Mathematics:add&p=[2,5]
 
 #### Special Considerations for WebSocket Server
-I started building this on PHP 5.6 and pthreads v2.1 and the biggest problem i faced were memory leaks, threads seemingly terminated but memory is not released, memory keeps on increasing even after threads are discarded. After researching for a few days found the best combinations that works perfectly for multi-threading. I would suggest you to use following versions as i tested over these:
+I started building this on PHP 5.6 and pthreads v2.1 and the biggest problem i faced were memory leaks, memory usage kept on increasing even after threads were discarded. After researching for a few days found the best combinations that works perfectly for multi-threading. I would suggest you to use following versions as i tested over these:
 
     php-7.2.23-Win32-VC15-x64 (Thread Safe)
     pthreads v 3.2.0
