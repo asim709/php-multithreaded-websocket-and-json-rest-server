@@ -3,7 +3,7 @@ The aim of this project is to ease the life of a developer by providing a simple
 
 Please note that, "Multithreading with PTHREADS v3.2.0 and PHP 7.2.23 is very very stable unlike the older versions". Tested on windows 10 and Server 2016. Following is the simplest example for an API class
 
-Create a class named **Mathematics** by inheriting it from **ServiceBase**
+Create a class named **Mathematics** by inheriting it from **ServiceBase** Name the file same as class name i.e; Mathematics.php
 
 **php**
 
