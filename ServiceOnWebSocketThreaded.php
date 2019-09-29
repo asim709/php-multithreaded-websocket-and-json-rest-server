@@ -45,15 +45,17 @@ while (True) {
     foreach ($HANDLERS as $key=>$HANDLER) {
     	if ($HANDLER->isJoined() OR $HANDLER->isTerminated() ) {
     		echo 'Thread Terminated: '.$HANDLER->getThreadId().PHP_EOL;
-
+		
+		// Taking all possible measures to unload terminated thread data from list
     		foreach ($HANDLERS[$key] as $idx => $value) {
-            	unset($HANDLERS[$idx]->$key);
+            		unset($HANDLERS[$idx]->$key);
         	}
 
     		$HANDLERS[$key] = null;
     		unset($HANDLERS[$key]);
     	}
     }
-
+    
+    // Below thread count may not be accurate 
     echo "Thread Count: ".sizeof($HANDLERS).PHP_EOL;
 }
