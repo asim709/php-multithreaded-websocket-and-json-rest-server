@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>
+        Web Socket Client - Math Api Call
+    </title>
+
+    <script type="text/javascript">
+        var ws = new WebSocket("ws://127.0.0.1:8088");
+        ws.onopen = function () {
+            console.log('connected');
+        };
+
+        ws.onerror = function (e) {
+            console.log(e.data);
+        };
+
+        ws.onmessage = function (e) {
+            document.querySelector("input[id='result']").value = e.data;
+        };
+
+        ws.onclose = function (e) { };
+
+        function AddTwoNumbers() {
+            var n1 = document.querySelector("input[id='num1']").value;
+            var n2 = document.querySelector("input[id='num2']").value;
+            var cmd = {a:"Mathematics:add",p:[n1,n2],_id:"add123"};
+            ws.send(JSON.stringify(cmd));
+        }
+    </script>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td>First number</td>
+            <td><input type="text" id="num1" /></td>
+        </tr>
+        <tr>
+            <td>Second Number</td>
+            <td><input type="text" id="num2" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="AddTwoNumbers()">Add numbers</button></td>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td><input type="text" id="result" /></td>
+        </tr>
+    </table>
+    
+    
+
+</body>
+</html>
