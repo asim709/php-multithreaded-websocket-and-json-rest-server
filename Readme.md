@@ -33,7 +33,7 @@ Create an HTML file on your server or edit existing and add the following javasc
         ws.onopen = function () {
             console.log('connected');
             
-            // Call the API by ending a message
+            // Call the api by sending a message
             var cmd = {a:"Mathematics:add",p:[20,30]};
             ws.send(JSON.stringify(cmd));
         };
