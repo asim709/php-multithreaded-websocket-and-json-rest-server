@@ -1,3 +1,4 @@
+#### Introduction
 The aim of this project is to ease the life of a developer by providing a simple architecture in which he can write code for JSON Rest based API (object oriented way) and serve it through either a URL or a multi-threaded web socket server. So you have the option to write API code once and then serve/use in multiple ways. The web-socket server in this project is purely built in **PHP** 7.2 using **stream sockets** and **pthreads** version 3.16 or higher. 
 
 Please note that, "Multithreading with PTHREADS v3.16 and PHP 7.2 is very very stable unlike the older versions". Tested on windows 10 and Server 2016.
@@ -60,13 +61,17 @@ Over a faulty call the API shall send a response like this:
 
 The response shall always be a JSON encoded string where status=true shows the transaction was successfull & you can read results from **data** attribute. However if there were any errors then the status would be false and in that case read error from **msg** attribute.
 
-> 
+#### Identifying Response Messages
+In a multi-threaded web-socket application there could be a lot of parallel request and response messages. So identifying which reponse message is related to which request is critical. For this purpose the deveoper can add an optional parameter with each message **_id** in our case and the server would re-attach the same request id in response.  If your application is fairly simple and caters for one type of requests and response messages then you may not need it.  The above mathematics add method example would look like this:
 
+	ws.onopen = function () {
+		var cmd = {a:"Mathematics:add",p:[20,30],_id:"axBy1"};
+		ws.send(JSON.stringify(cmd));
+	};
 
+Reponse would look like this:
 
-
-
-
+	{"status":true,"data":"50","_id":"axBy1"}
 
 
 
