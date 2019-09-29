@@ -46,7 +46,7 @@ while (True) {
     	if ($HANDLER->isJoined() OR $HANDLER->isTerminated() ) {
     		echo 'Thread Terminated: '.$HANDLER->getThreadId().PHP_EOL;
 		
-		// Taking all possible measures to unload terminated thread data from list
+		// Taking all possible measures to unload terminated thread data from memory
     		foreach ($HANDLERS[$key] as $idx => $value) {
             		unset($HANDLERS[$idx]->$key);
         	}
