@@ -88,4 +88,4 @@ I started building this on PHP 5.6 and pthreads v2.1 and the biggest problem i f
 
 If you have any question (i dont know if github provides any feature for comments/chat) you can leave a message on:
 
-**skype: asimishaq<at>live.com**
+**skype: asimishaq[at]live.com**
