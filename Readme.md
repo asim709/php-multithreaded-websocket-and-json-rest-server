@@ -21,7 +21,7 @@ Thats all, what we did in above code is that we created the code to server it ov
 
 http://localhost/myproject/service?a=Mathematics:add&p=[2,5]
 
-Url in this format shall instentiate matematics class using reflection and call the method "add" with parameters. whatever the add returns, send it in response. 
+Url in this format shall instantiate mathematics class using reflection and call the method "add" with given parameters 2 and 5. Return value is then sent in response. 
 
 **2) Calling "add" method through web-sockets**
 
