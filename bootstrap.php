@@ -1,7 +1,6 @@
 <?php
 /*
 	Created by: Asim Ishaq
-	Contact: asim709@gmail.com
 
 	Purpose: Intercept all web requests, identify api requests and load relevant processes to handle the request.
 */
