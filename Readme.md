@@ -84,6 +84,12 @@ I started building this on PHP 5.6 and pthreads v2.1 and the biggest problem i f
 
 ![alt text](https://raw.githubusercontent.com/asim709/php-multithreaded-websocket-and-json-rest-server/master/WebSocket%20Diagram.png)
 
+
+#### Installation Instructions
+
+Download all the files and place them in htdocs / web accessible location.
+Add **temp** folder in the folder in which the files are placed. It will used to save log files.
+
 If you have any questions (i dont know if github provides any feature for comments/chat) you can leave a message on:
 
 **skype: asimishaq[at]live.com**
