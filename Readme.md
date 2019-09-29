@@ -1,5 +1,5 @@
 #### Introduction
-The aim of this project is to ease the life of a developer by providing a simple architecture in which he can write code for JSON Rest based API (object oriented way) and serve it through either a URL or a multi-threaded web socket server. So you have the option to write API code once and then serve/use in multiple ways. The web-socket server in this project is purely built in **PHP** 7.2 using **stream sockets** and **pthreads** version 3.16 
+The aim of this project is to ease the life of a developer by providing a simple architecture in which he can write code for JSON Rest based API (object oriented way) and serve it through either a URL or a multi-threaded web socket server. So you have the option to write API code once and then serve/use in multiple ways. The web-socket server in this project is purely built in **PHP** 7.2 using **stream sockets** and **pthreads** version 3.16 or higher. 
 
 Please note that, "Multithreading with PTHREADS v3.16 and PHP 7.2 is very very stable unlike the older versions". Tested on windows 10 and Server 2016.
 
@@ -73,6 +73,15 @@ In a multi-threaded web-socket application there could be a lot of parallel requ
 Reponse would look like this:
 
 	{"status":true,"data":"50","_id":"axBy1"}
+
+#### Another way to Call the API
+Normally in rest based services the APIs are called by providing parameters in URL, what if when there is huge amount of data that exceeds the limits of URL max size? For this the developer could initiate POST request instead of GET and enclose parameters in request body. Simple!  
+
+#### Special Considerations for WebSocket Server
+I started building this on PHP 5.6 and pthreads v2.1 and the biggest problem i faced were memory leaks, threads seemingly terminated but memory is not released, memory keeps on increasing even after threads are discarded. After researching for a few days found the best combinations that works perfectly for multi-threading. I would suggest you to use following versions as i tested over these:
+
+    php-7.2.23-Win32-VC15-x64 (Thread Safe)
+    pthreads v 3.2.0
 
 
 
