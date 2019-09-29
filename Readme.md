@@ -75,7 +75,7 @@ Reponse would look like this:
 	{"status":true,"data":"50","_id":"axBy1"}
 
 #### Another way to Call the API
-Normally in rest based services the APIs are called by providing parameters in URL, what if when there is huge amount of data that exceeds the limits of URL max size? For this the developer could initiate POST request instead of GET and enclose parameters in request body. Simple!  
+There could be times when you may need to send large amount of data or blob to server. The large size may exeed the maximum URL limit and request may not be completed. To solve this issue the user can simple make a **POST** request to server with all the parameters enclosed in request body as in any other post requests. However in web-sockets there are no known limits.
 
 #### Special Considerations for WebSocket Server
 I started building this on PHP 5.6 and pthreads v2.1 and the biggest problem i faced were memory leaks, threads seemingly terminated but memory is not released, memory keeps on increasing even after threads are discarded. After researching for a few days found the best combinations that works perfectly for multi-threading. I would suggest you to use following versions as i tested over these:
