@@ -1,8 +1,7 @@
 <?php
 /*
 	Created by: Asim Ishaq
-
-	Purpose: Intercept all web requests, identify api requests and load relevant processes to handle the request.
+	Purpose: Intercept web requests, identify & respond to api requests.
 */
 
 error_reporting ( E_ALL ^ E_NOTICE ^ E_DEPRECATED ^ E_WARNING ^ E_ERROR ^ E_STRICT );
