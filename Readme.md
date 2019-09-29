@@ -86,8 +86,8 @@ I started building this on PHP 5.6 and pthreads v2.1 and the biggest problem i f
 
 
 #### Installation Instructions
-Download all the files and place them in htdocs / web accessible location.
-Add **temp** folder in the folder in which the files are placed. It will used to save log files.
+    Download all the files and place them in htdocs / web accessible location.
+    Add **temp** folder in the folder in which the files are placed. It will used to save log files.
 
 #### Contact
 If you have any questions (i dont know if github provides any feature for comments/chat) you can leave a message on:
