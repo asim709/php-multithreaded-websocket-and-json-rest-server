@@ -1,7 +1,7 @@
 #### Introduction
-The aim of this project is to ease the life of a developer by providing a simple architecture in which he can write code for a web API  (object oriented way) and serve it through either a URL (JSON REST based) or a multi-threaded web socket server. So you have the option to write API code once and then serve/use in multiple ways. The web-socket server in this project is built with **PHP** 7.2 using **stream sockets** and **pthreads** version 3.2.0
+The aim of this project is to ease the life of a developer by providing a simple architecture in which he can write code for a web API  (object oriented way) and serve it through a URL based service or through a multi-threaded web socket server. So you have the option to write API code once and then serve/use in multiple ways. The web-socket server in this project is built with **PHP** 7.2 using **stream sockets** and **pthreads** version 3.2.0
 
-Please note that, "Multithreading with PTHREADS v3.2.0 and PHP 7.2.23 is very very stable unlike the older versions". Tested on windows 10 and Server 2016. Following is the simplest example for an API class
+Please note that, "Multithreading with PTHREADS v3.2.0 and PHP 7.2.23 is very very stable. I tested on windows 10 and Server 2016. Following is the simplest example for an API class
 
 Create a class named **Mathematics** by inheriting it from **ServiceBase** Name the file same as class name i.e; Mathematics.php
 
